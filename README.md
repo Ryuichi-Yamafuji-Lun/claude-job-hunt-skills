@@ -60,7 +60,7 @@ The installer copies the skills into `~/.claude/skills/` and creates your person
 | I want to… | Type in Claude Code |
 |---|---|
 | find jobs that fit me | `/jobsweep` |
-| tailor my resume to a job and apply | `/tailor-apply` and paste the job link |
+| tailor my resume to a job and apply | `/tailor-apply` and paste the job link (or the job description text) |
 | practice coding interviews | `/interview-drill` |
 | see my practice progress | `/interview-drill stats` |
 

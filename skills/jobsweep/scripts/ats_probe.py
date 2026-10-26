@@ -469,6 +469,20 @@ def resolve(spec):
     if "amazon.jobs" in low:
         mm = re.search(r"/jobs/(\d+)", s)
         return probe_amazon(mm.group(1) if mm else s)
+    # Company careers pages that embed Greenhouse: stripe.com/jobs/search?gh_jid=8212508.
+    # The board slug is usually the company's domain name; a 404 means the guess was wrong,
+    # not that the job closed, so never report CLOSED from a guess.
+    mm = re.search(r"[?&]gh_jid=(\d+)", s)
+    if mm:
+        host = urllib.parse.urlparse(s if "://" in s else "https://" + s).hostname or ""
+        labels = [p for p in host.split(".") if p not in ("www", "careers", "jobs", "boards")]
+        if labels:
+            rec = probe_greenhouse(labels[0], mm.group(1))
+            if rec.get("status") != "CLOSED":
+                return [rec]
+        return [{"status": "UNVERIFIABLE", "url": s,
+                 "note": f"Greenhouse job {mm.group(1)} embedded on a company site; board slug not "
+                         f"guessed. Run find_boards.py <company>, then greenhouse:<slug>/{mm.group(1)}"}]
     if "careers.microsoft.com" in low:
         mm = re.search(r"(\d{6,})", s)
         return [{"status": "NEEDS-UI", "url": s, "title": None,
