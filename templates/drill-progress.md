@@ -8,7 +8,7 @@ Scores and history are stored in drill-attempts.jsonl next to this file; run /in
 
 ## Settings
 - Language: UNSET
-- Starting level: UNSET                      # rusty / comfortable with easy / comfortable with medium
+- Starting level: UNSET                      # new / rusty / comfortable with easy / comfortable with medium
 - Workspace: ~/interview-practice
 - Editor open command: code
 - Mock length (minutes per problem): 45

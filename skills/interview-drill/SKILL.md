@@ -30,7 +30,9 @@ Keep it to one short message with at most four questions, and offer defaults so 
 1. Which language will you interview in? (default: Python)
 2. Any real interviews or OAs coming up, and when? (optional; used to pace the plan)
 3. Which editor? (default: VS Code; anything works)
-4. Roughly where are you: rusty, comfortable with easy problems, or comfortable with mediums? (default: rusty)
+4. Roughly where are you: new to LeetCode-style problems, rusty, comfortable with easy problems, or comfortable with mediums? (default: rusty)
+
+**New to it** (hasn't worked through a NeetCode 75 / Blind 75 style list): the diagnostic would only measure that the patterns are unfamiliar, so don't run it yet. Say so in one line, record `Starting level: new`, and start with `learn` on the first stage of `references/curriculum.md`, going stage by stage with `guided` reps. Offer `diagnose` once they've studied most stages, or when they ask. Mock and OA modes stay available any time they want to try one.
 
 Then:
 ```bash
@@ -50,7 +52,7 @@ Dispatch on the argument. No argument → `next`. If the user seems unsure, show
 
 | Invocation | What to do |
 |---|---|
-| `next` | The default. If anything is due for review, do that. Otherwise, if the diagnostic isn't finished, continue it. Otherwise pick the top category from `stats.py --focus` and run a `mock` on a **new problem generated for that weakness** |
+| `next` | The default. If anything is due for review, do that. Otherwise, if `Starting level: new`, continue the `learn`/`guided` path through the curriculum. Otherwise, if the diagnostic isn't finished, continue it. Otherwise pick the top category from `stats.py --focus` and run a `mock` on a **new problem generated for that weakness** |
 | `diagnose` | The baseline: one problem per core category (below), spread over as many sessions as the user likes. Builds the weakness bank |
 | `grind [category]` | Back-to-back fresh problems in one category (the weakest if none given), each one aimed at the specific gap the last one exposed, until the user stops or the category levels up |
 | `stats` | Run `python3 S/stats.py` and present it (see **Stats** below) |

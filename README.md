@@ -67,7 +67,7 @@ The installer copies the skills into `~/.claude/skills/` and creates your person
 **What to have ready:**
 - For `/jobsweep`: what kind of roles you want, your strongest areas, when you can start, and (optionally) companies you like.
 - For `/tailor-apply`: your resume as a file (PDF, Word, Markdown or text), a Google Docs link, or pasted text.
-- For `/interview-drill`: nothing. It asks which language you use.
+- For `/interview-drill`: nothing. It asks which language you use. It works best if you've already worked through something like [NeetCode 75](https://neetcode.io/practice) (see below).
 
 Your job tracker is a simple Markdown table at `~/.claude/job-search/tracker.md`, so no Notion or Google Sheets is required. You can switch to either later.
 
@@ -104,7 +104,9 @@ Titles mislead. In testing, a role titled "Software Engineer, Early Career" turn
 
 ### `/interview-drill`: practice that targets your weak spots
 
-1. **Setup:** your language, editor, how rusty you are, and any upcoming interviews.
+> **Best after a first pass of the basics.** The drill is for sharpening and measuring, not first exposure: it assumes you've seen the core patterns once, roughly the [NeetCode 75](https://neetcode.io/practice) or [Blind 75](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions) level. If you haven't, say so at setup. It skips the diagnostic and starts you in `learn` / `guided` mode, one pattern at a time, then runs the diagnostic once the basics are in.
+
+1. **Setup:** your language, editor, how much practice you have, and any upcoming interviews.
 2. **Diagnostic:** one problem in each core topic (arrays, two pointers, sliding window, stack, binary search, trees, heaps, intervals, graphs, dynamic programming), each run as a mock interview. Spread it over as many sessions as you like.
 3. **Weakness bank:** after every problem it records specifically what went wrong, like *"found the DP recurrence, then the base row was off by one"* or *"never asks about empty input."*
 4. **Targeted practice:** every new problem is generated for your weakest spot, at a difficulty that matches your level.
