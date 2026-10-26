@@ -135,7 +135,7 @@ def build(rows, today):
 def print_report(rep):
     t = rep["totals"]
     if not t["attempts"]:
-        print("No practice logged yet. Run /interview-drill diagnose to get a baseline.")
+        print("No practice logged yet. Run /interview-drill to start; it asks a few setup questions first.")
         return
     print(f"\nPractice so far: {t['problems']} problems, {t['attempts']} attempts "
           f"({t['scored']} scored, {t['clean']} clean)\n")
