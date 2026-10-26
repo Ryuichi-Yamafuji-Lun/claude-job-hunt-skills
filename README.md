@@ -10,6 +10,8 @@ Three [Claude Code](https://claude.com/claude-code) skills for a software job se
 
 No setup files to edit: the first time you run each skill, it asks you a few questions and remembers the answers.
 
+**Who it's for:** students and early-career engineers looking for new-grad or entry-level software roles. The job search adapts to other roles and levels through your profile, and the interview practice works for anyone preparing for coding rounds. It works best once you've done a first pass of something like [NeetCode 75](https://neetcode.io/practice); if you haven't, it starts you on the basics.
+
 ---
 
 ## Contents
